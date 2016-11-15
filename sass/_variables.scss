@@ -1,0 +1,192 @@
+//color
+$color_white:#fff;
+$color_highlight: #FF5E45;
+
+$color_sub:#3D1101;//字宗色
+$color_border:#c6c6c6;//灰色
+
+$color_bg:#EFE9E7;//米色背景
+
+//線
+$line-s: 1px solid $color_sub;
+$line-highlight: 3px solid $color_highlight;
+
+//media queries的width
+
+$pc-media:1025px;
+$pcs-media:930px;
+
+$pad-media:768px;
+$pads-media:569px;
+$phone-media:480px;
+$phones-media:376px;
+
+
+
+//imgsprite
+$icon-spacing: 20px;
+@import "icon/*.png";
+@include all-icon-sprites;
+
+//間距margin position和display~~
+@mixin display ($disp,$padding,$margin,$setposition) {
+  display: $disp;  
+  padding: $padding;
+  margin: $margin;
+  position: $setposition;
+  @content;
+}
+
+//段落行距字型
+@mixin paragraph ($size-p:14px,$space:1px,$l-h-p:20px,$color_sub:#3D1101,$mt:10px){
+  margin-top: $mt;
+  font-size: $size-p;
+  letter-spacing: $space;
+  line-height: $l-h-p;
+  color: $color_sub;
+}
+
+//inputstyle search樣式
+@mixin inputstyle (){
+    border: $line-s;
+    padding: 10px;
+    letter-spacing: 1px;
+
+}
+@mixin inputsearch{
+    width: 40px;
+  height: 36px;
+  border: $line-s;
+  background: $color_sub;
+  color: $color_white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+//title
+@mixin wrap_title($color_sub:#3D1101) {
+  text-align: center;
+  color: $color_sub; 
+}    
+//fafacolor
+@mixin linkinfo ($color:#DB4437){
+  color: $color
+}
+
+//透明色
+@mixin opacity_b ($black:#000,$value:0.8){
+  background-color: $black;
+  background: rgba(0, 0, 0, $value);
+
+}
+
+
+//logo圖片
+@mixin bglogo($bg){
+  background:url("../images/#{$bg}");
+  width:image-width("../images/#{$bg}");
+  height:image-height("../images/#{$bg}");
+
+}
+@mixin texthide{  
+  white-space: nowrap;
+  text-indent: 100%;
+  overflow: hidden;
+}
+
+@mixin bg($bg){
+  background:url("../images/#{$bg}");
+ 
+}
+//圓形圖片
+@mixin bg_circle($bg){
+  background:url("../images/#{$bg}");
+ width:image-width("../images/#{$bg}");
+  height:image-height("../images/#{$bg}");
+   border-radius: 50%;
+}
+
+//框框線
+@mixin line($line:1px,$color:#3D1101){
+  border: $line solid $color;
+}
+
+
+
+//框框box
+@mixin box($line-l:1px solid #c6c6c6,$br:5px,$bg:#fff){
+    background: $bg;
+    border: $line-l;
+    border-radius:$br; 
+}
+
+//...................按鈕樣式
+@mixin btnstyle($light:#e88d51,$dark:#F56C23){
+    border: 1px solid darken($dark,5%);
+  color: $color_white;
+cursor: pointer;
+ @include border(5px);
+ @include background-image(linear-gradient($light, $dark));
+  &:hover {
+  @include background-image(linear-gradient($dark, $light));
+  }
+  &:active {border: 1px solid #fff;}
+
+  @content;
+  
+}
+//box陰影
+@mixin boxshadow($dark:0.5){
+ box-shadow: 1px 1px 1px rgba(0,0,0,$dark);
+}
+
+//按鈕圓弧
+@mixin border($icon-border:10px){
+ border-radius:$icon-border; 
+}
+
+//上下bar
+@mixin bar($bgcolor:#000,$color_white:#fff){
+   background-color: $bgcolor;
+  color: $color_white;
+  @content;
+} 
+
+
+
+//1024
+ @mixin pc-width() {
+  @media(max-width: $pc-media) {
+               @content;
+         }
+    }
+//768
+ @mixin pad-width() {
+  @media(max-width: $pad-media) {
+               @content;
+         }
+    }
+
+//569
+ @mixin pads-width() {
+  @media(max-width: $pads-media) {
+               @content;
+         }
+    }
+
+//480
+ @mixin phone-width() {
+  @media(max-width: $phone-media) {
+               @content;
+         }
+    } 
+
+
+//375
+ @mixin phones-width() {
+  @media(max-width: $phones-media) {
+               @content;
+         }
+    }
+

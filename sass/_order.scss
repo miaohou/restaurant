@@ -1,0 +1,107 @@
+.orderfood {
+	background-color: $color_bg;
+}
+
+.ordermenu{
+	float: left;
+	width: 20%;
+  ul{
+  @include display(null,null,20px 0 0 0,null);
+  }  
+  a{
+	@include display(block,10px,null,null);
+ 	color: $color_sub;
+  	border-bottom: $line-s;
+  &:hover{
+  	  	color: $color_white;
+	background-color: $color_sub;
+
+  	}   	
+  }	
+}
+.searchbar{
+	float: left;
+   width: 77%;
+   margin-left: 3%;
+  .searchTerm{
+   width: 250px;
+   float: left;
+	@include inputstyle;
+}	
+.searchButton{
+	@include inputsearch;
+}
+}
+
+.right{
+	.cartcolor{
+		color: $color_sub;
+	}
+	float: right;
+	& a{
+		color: $color_sub;
+		border-right: $line-s;
+	@include display(null,0 5px,0 5px,null);
+	&:hover{
+		color: #000;
+		}
+	}
+}
+.productall{
+	@include display(null,null,20px 0 0 0,null);
+
+   ul li{
+   	float: left;
+   	margin-right: 1%;
+   	margin-bottom: 2%;
+
+   }
+} 
+
+.product{
+	position: relative;
+	   	@include boxshadow;
+	width: 240px;
+  .like{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+   &:hover{
+   	color: red;
+   }
+  }
+}
+
+.productinfo{
+	@include display(null,10px,null,null);
+   	text-align: center;
+   	p{
+   		@include paragraph(14px,null,null,#3D1101,null);
+   	}
+   	hr{
+   	@include paragraph(null,null,20px auto,null,null);
+   	border: 0;
+    background-color: $color_sub;
+    height: 2px;
+    width: 80px;
+   	}
+   	.price{
+   		font-size: 20px;
+   		font-style:italic;
+   	@include display(null,0 0 10px 0,null,null);
+   	}	
+}
+
+.addcart{
+   	border: $line-highlight;
+	background-color: $color_bg;
+    width: 80%;
+    letter-spacing: 1px;
+	a{
+	color:$color_highlight;
+	@include display(block,5px 0,null,null);
+	}
+    &:hover{
+    	opacity: 0.7;
+    }
+}

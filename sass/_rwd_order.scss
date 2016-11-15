@@ -1,0 +1,67 @@
+.product {
+    @include pc-width {
+      width: 300px;
+         }
+     
+}
+
+.ordermenu{
+     @include pc-width {
+      width: 25%;
+         }
+     @include phone-width {
+      width: 100%;
+  @include display(null,null,0 0 30px 0,null);
+         } 
+             
+           
+
+}
+
+.searchbar{
+     @include pc-width {
+      width: 70%;
+         }
+     @include phone-width {
+      width: 100%;
+      margin-left:0;
+         }
+.searchTerm{
+     @include phone-width {
+      width: 85%;  
+         }
+
+}         
+}
+
+
+
+
+.product {
+    @include pad-width {
+      width: 230px;
+         }
+     @include phone-width {
+      width: 100%;
+         }    
+}
+
+.productall ul li{
+      @include phone-width {
+  @include display(null,null,0 0 5% 5%,null);
+         }
+      @include phones-width {
+  @include display(null,null,0 1% 5% 2%,null);
+         }  
+}
+
+
+.right {
+    @include phone-width {
+    @include display(null,null,20px 10px,null);
+
+
+         }  
+}
+
+

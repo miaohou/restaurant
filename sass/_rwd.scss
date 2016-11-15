@@ -1,0 +1,182 @@
+///1024
+.wrap{
+          
+    @include pc-width {
+                width:90%;
+         }         
+      }
+ 
+.gmap{
+    @include pc-width {
+                width:40%;
+         }	
+}
+
+.linkinfo{
+	
+}
+
+//768
+.chefinfo .photo{
+        
+    @include pad-width {
+		@include bg("main_chef_brown_s.png");
+		width: 250px;
+		margin: 0 20px;
+
+         }
+    @include pads-width {
+		margin: 0 25px 0 0 ;
+		width: 190px;
+         }
+        @include phone-width {
+         
+    @include bg("main_chef_brown.png");
+              width: 100%;
+         }
+
+       @include phones-width {
+         width: 100%;
+margin:0;
+         } 
+
+      }
+
+
+.chefintroduce{
+    @include pad-width {
+	width: 60%;
+         }
+    @include pads-width {
+	padding: 20px 0 0 0;
+         }
+
+       @include phone-width {
+width: 99%;
+padding:  30px 10px;
+         }
+
+       @include phones-width {
+width: 99%;
+padding:  30px 10px;
+         } 
+}
+
+
+.resavation .gmap{
+        
+    @include pad-width {
+      width: 45%;
+         }
+    @include phone-width {
+      width: 100%;
+         }
+
+    @include phones-width {
+      width: 100%;
+           margin: 10% 1% 2% 0 
+         }
+     }
+
+.re_form{
+
+      @include phone-width {
+      width: 100%;
+         }
+    @include phones-width {
+      width: 100%;
+
+         }	
+}
+
+//569 
+
+.professional ul li{
+
+    @include pads-width {
+      width: 70%;
+      margin-left: 15%;
+         }
+}
+
+.linkinfo{
+    @include pad-width {
+      right: 10px;
+         }
+       @include phone-width {
+      position: static;
+      margin-top: 10%;
+         }  	
+       @include phones-width {
+      position: static;
+      margin-top: 10%;
+         }      
+}
+
+//320
+
+.footer ul li{
+       @include phone-width {
+      width: 100%;
+      margin-bottom: 5%;
+         } 
+
+}
+
+.peoplesay ul li{
+       @include phones-width {
+         width: 100%;
+        margin-left: 3%;
+         } 
+
+}
+
+.peoplesayword{
+       @include phones-width {
+         width: 200px;
+
+         } 
+}
+
+ul.menu .icon{
+    @include phones-width {
+    float: right;
+    display: inline-block;
+         } 
+}
+
+ul.menu li{
+    @include phones-width {
+        display: none;
+
+           } 	
+}
+
+ul.menu.responsive{
+    @include phones-width {
+    position: relative;
+           } 	
+}
+ul.menu.responsive li.icon{
+    @include phones-width {
+        position: absolute;
+right: -15px;
+    top: -40px;
+           } 	
+}
+
+  ul.menu.responsive li {
+    @include phones-width {
+
+    display: inline;
+           } 	
+}
+
+  ul.menu.responsive li a  {
+    @include phones-width {
+	margin-bottom: 10px;
+    display: block;
+    text-align: center;
+    width: 100%;
+           } 	
+}

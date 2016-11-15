@@ -1,0 +1,17 @@
+
+.loginform{
+    @include pad-width {
+    width: 60%;
+    }        
+    @include phone-width {
+    width: 100%;
+    } 
+}
+
+
+.register,.sign{
+    @include pads-width {
+     margin-bottom: 3%; 
+    width: 100%;
+    }   
+}

@@ -1,0 +1,45 @@
+.login {
+	background-color: $color_bg;
+
+	h3,h4{
+		@include wrap_title;
+	}
+	p{
+	@include paragraph;
+
+	}
+}
+
+.loginform{
+	padding: 20px;	
+	border-top: $line-highlight;
+	margin: 20px auto;
+		   	@include boxshadow;
+	width: 35%;
+	.login{
+		padding: 20px 0;		
+		text-align: left;
+	}
+	.info{
+		width: 100%;
+	@include inputstyle;
+
+	}
+	a{
+		color: $color_highlight;
+    
+	}
+}
+	
+.register{
+	@include btnstyle(#adadad,#9e9e9e);
+    height: 30px;
+    width: 49%;
+
+}	
+
+.sign{
+	@include btnstyle;
+	height: 30px;
+    width: 49%;
+}	

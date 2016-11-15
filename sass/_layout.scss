@@ -1,0 +1,126 @@
+//.............980wrap
+.wrap{
+	@extend %wrap;
+	@include display(null,50px 0,null,null);	
+
+}
+
+//.............上下bar
+.allwrap{
+	font-family: "微軟正黑體", sans-serif;
+
+    h3{
+@extend %all-h3;
+  }
+    h2{
+@extend %all-h2;
+  }
+
+    h4{
+@extend %all-h4;
+  }
+}
+.header{
+  h1{
+@include bglogo("logo_w.png");
+@include texthide;
+
+  }
+   color: $color_white;
+   	@include bg("header_desktop.png");
+	 background-size: cover;
+   	@include line(1px,#000) ;
+}
+
+.topbar {
+@include bar(#000,#fff);
+@include opacity_b;
+
+}
+
+
+.wrap_space{
+		padding: 16px;
+	position: relative;	
+}
+
+ul.menu{
+position: absolute;
+top: 20px;
+right: 0;
+  li{
+  	display: inline;
+	a{
+	   transition: 0.3s;
+	   @include display(null,0 10px,null,null);
+		  &:hover{
+		  	color: $color_border;
+		  }
+	  }	 
+}
+.icon{
+	display: none;
+}
+}
+
+.maintitle{
+max-width: 480px;
+margin: 150px auto;
+padding: 20px;
+@include opacity_b(#000,0.2);
+text-align: center;
+h2{
+  
+  margin: 10px 0;
+}
+p{
+@include paragraph(16px,1px,22px,#fff);
+}
+
+}
+
+
+
+//............footer
+.footer {
+	position: relative;
+	background-color: $color_bg;
+p{
+@include paragraph(14px,0px,20px,#3D1101);
+
+
+}
+ul li{
+  float: left;
+  width: 33%;
+  margin-right: 20px;
+}
+}
+
+.linkinfo{
+	position: absolute;
+	top: 50px;
+	right: 60px;
+	text-align: right;
+    color: $color_sub;
+	h1{
+        font-size: 30px;
+		margin-bottom: 15px;
+		@extend %all-h1;
+	}
+	.google{
+	@include linkinfo(#DB4437);
+	}
+	.twitter{
+	@include linkinfo(#4EABE1);
+		}
+	.facebook{
+	@include linkinfo(#3A5795);
+		}	
+	a:hover{
+		opacity: 0.8;
+	}
+
+}
+
+

@@ -1,0 +1,47 @@
+
+
+
+
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+////中間寬度
+%wrap{
+max-width: 980px;
+    margin: 0 auto;	
+}
+
+
+////大標
+%all-h1{
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+}
+
+%all-h3{
+	color: $color_sub;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.5em;
+
+}
+
+
+%all-h2{
+  font-size: 40px;
+}
+
+%all-h4{
+	color: $color_sub;
+	font-weight: 700;
+  font-size: 18px;
+      line-height: 1.5em;
+}
