@@ -12,8 +12,21 @@
          }	
 }
 
-.linkinfo{
+.header{
+    @include pad-width {
+    @include bg("header_desktop.png");
+      background-position:  50% 50%;
+      height: 420px;
+         }  
 	
+}
+
+.maintitle{
+    @include pad-width {
+  @include display(null,null,80px auto,null);  
+
+
+         }  
 }
 
 //768
@@ -29,15 +42,14 @@
 		margin: 0 25px 0 0 ;
 		width: 190px;
          }
-        @include phone-width {
-         
-    @include bg("main_chef_brown.png");
+    @include phone-width {         
+      @include bg("main_chef_brown.png");
               width: 100%;
          }
 
-       @include phones-width {
+    @include phones-width {
          width: 100%;
-margin:0;
+        margin:0;
          } 
 
       }
@@ -138,45 +150,61 @@ padding:  30px 10px;
          } 
 }
 
-ul.menu .icon{
-    @include phones-width {
+
+
+/* menu 768以下伸縮選單 */
+.showmenu{
+       @include pad-width {
+    display: block;
     float: right;
-    display: inline-block;
          } 
 }
 
-ul.menu li{
-    @include phones-width {
-        display: none;
+ 
+.menu{
+    @include pad-width {
+    /*隱藏選單開始*/
+    max-height: 0px;
+    overflow: hidden;
+    /*隱藏選單結束*/
+    transition: max-height 1s;
 
-           } 	
+    /*絕對定位疊在網頁上*/
+    position: absolute;
+    z-index: 100;
+    /*header 80px+1px boder 線條*/
+    top: 56px;
+    left: 0;
+    right: 0;
+    background: #000;
+text-align: center;
+         } 
 }
+ 
+.menu li{
+  @include pad-width {
+    border-top: 1px solid $color_sub;
+  display: block;
+         } 
+  }
 
-ul.menu.responsive{
-    @include phones-width {
-    position: relative;
-           } 	
+.menu li a{
+  @include pad-width {
+  display: block;
+  padding: 1em;
+         }   
 }
-ul.menu.responsive li.icon{
-    @include phones-width {
-        position: absolute;
-right: -15px;
-    top: -40px;
-           } 	
-}
+.menu li a:hover{
+   @include pad-width {
+    background: $color_sub;
+    color: #fff;
+         }    
+  }
 
-  ul.menu.responsive li {
-    @include phones-width {
 
-    display: inline;
-           } 	
-}
 
-  ul.menu.responsive li a  {
-    @include phones-width {
-	margin-bottom: 10px;
-    display: block;
-    text-align: center;
-    width: 100%;
-           } 	
-}
+.menu_show .menu{
+  @include pad-width {
+    max-height: 500px;
+         } 
+ }

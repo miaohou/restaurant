@@ -22,32 +22,31 @@
 }
 .header{
   h1{
+  	float: left;
 @include bglogo("logo_w.png");
 @include texthide;
 
   }
    color: $color_white;
    	@include bg("header_desktop.png");
-	 background-size: cover;
+	background-size: cover;
    	@include line(1px,#000) ;
 }
 
 .topbar {
 @include bar(#000,#fff);
 @include opacity_b;
-
+	position: relative;	
 }
 
 
 .wrap_space{
 		padding: 16px;
-	position: relative;	
+
 }
 
-ul.menu{
-position: absolute;
-top: 20px;
-right: 0;
+.menu{
+  float: right;
   li{
   	display: inline;
 	a{
@@ -58,9 +57,9 @@ right: 0;
 		  }
 	  }	 
 }
-.icon{
-	display: none;
 }
+.showmenu{
+  display: none;
 }
 
 .maintitle{
